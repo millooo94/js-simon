@@ -1,6 +1,8 @@
 let randomNumber;
 const arrPCNumbers = [];
 const arrUserNumbers = [];
+const arrTotalNumbers = [];
+let score;
 
 const body = document.querySelector('body')
 
@@ -35,16 +37,32 @@ function hidden() {
     
     eleButton.addEventListener ('click', function() {
 
+        score = 0
+
+        arrTotalNumbers.push(eleInput.value)
+
+        // console.log('total', arrTotalNumbers)
+
         if (arrPCNumbers.includes(parseInt(eleInput.value)) && arrUserNumbers.length < 5) {
             arrUserNumbers.push(eleInput.value)
-            console.log(arrUserNumbers)
+            score++
+            // console.log('match', arrUserNumbers)
         }
 
         eleInput.value = '' 
 
-            // const eleResult = document.createElement('div')
-            // eleResult.innerHTML = arrUserNumbers
-            // body.append(eleResult)
+        if (arrTotalNumbers.length == 5) {
+
+            const eleResult = document.createElement('div')
+            eleResult.innerHTML = arrUserNumbers
+            body.append(eleResult)
+            const eleScore = document.createElement('div');
+            eleScore.innerHTML = score
+            body.append(eleScore)
+            
+        }
+
+
 
     })
 

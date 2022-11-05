@@ -5,6 +5,8 @@ body {
     align-items: center;
     height: 100vh;
     overflow: hidden;
+    background-color:#031a6b;
+    color: white;
 }
 
 .hidden {
@@ -13,6 +15,10 @@ body {
 
 .container {
     display: flex;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Anton', sans-serif;
 }
 
 .text {
@@ -32,9 +38,21 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 5rem;
-    height: 5rem;
-    border-radius: 100px;
+    width: 4rem;
+    height: 2rem;
+    border-radius: 10px;
+    background-color: #05B2DC;
+    border: none;
+    color: white;
+    font-size: .9rem;
+    font-weight: bold;
+    font-family: 'Saira Condensed', sans-serif;
+    /* text-shadow: 2px 2px #087CA7; */
+}
+
+.btn:active {
+    background-color: #087CA7;
+    border: 2px solid aqua;
 }
 
 .error {
@@ -48,4 +66,34 @@ body {
   25% { margin-left: 0.5rem; }
   75% { margin-left: -0.5rem; }
   100% { margin-left: 0rem; }
+  }
+
+  .timer {
+    display: flex;
+    margin-top: 2rem;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    font-family: 'Saira Condensed', sans-serif;
+  }
+
+  .result {
+    text-align: center;
+    font-size: 5rem;
+
+  }
+
+  .score {
+    font-size: .8rem;
+    padding: .4rem;
+    margin-top: 3rem;
+    text-transform: uppercase;
+    border-radius: 20px;
+    background-color: #087CA7;
+    font-family: 'Saira Condensed', sans-serif;
   }
